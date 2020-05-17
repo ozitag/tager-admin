@@ -10,12 +10,12 @@ RUN apk --no-cache add --virtual builds-deps build-base python
 
 WORKDIR /var/www/app
 
-COPY ./admin/package.json ./
-COPY ./admin/yarn.lock ./
+COPY ./package.json ./
+COPY ./yarn.lock ./
 
 RUN yarn install
 
-COPY ./admin .
+COPY ./ .
 
 RUN yarn build
 
@@ -23,6 +23,6 @@ RUN yarn build
 FROM nginx:stable-alpine as production-stage
 
 COPY --from=build-stage /var/www/app/dist /var/www/app/admin
-COPY ./docker/admin/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
 
 CMD ["nginx", "-g", "daemon off;"]

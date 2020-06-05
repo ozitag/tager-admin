@@ -36,9 +36,9 @@ export type SidebarMenuItemType = {
 };
 
 export type LogoConfig = {
-  'logo-ext': Nullable<string>;
-  name: Nullable<string>;
-  'name-color': Nullable<string>;
+  logo: Nullable<string>;
+  label: Nullable<string>;
+  'label-color': Nullable<string>;
 };
 
 export type BrandConfig = {

@@ -864,10 +864,10 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.0.tgz#623aa40623550e3b94767cffeb096a6fb597ed09"
   integrity sha512-9GvTek+7cVw7r+L7TNGOG1astZJWXz2h5q4BqMXl28KN+24iSCm1xo+RhZOZvwdT3bzNe9hD7riJc/lBoO7mgg==
 
-"@tager/admin-core@^0.0.1-alpha.1":
-  version "0.0.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/@tager/admin-core/-/admin-core-0.0.1-alpha.1.tgz#ef0f51ed621b2425e340a27361c5d6615f997437"
-  integrity sha512-+/20ZG7ugA44e0QYgZjL/LTQFk2hF8VeygSCbXadImiiLwM3WMlSSfvcEGEOr52PPJxqlIZvKO66nxsdsdxIgQ==
+"@tager/admin-core@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@tager/admin-core/-/admin-core-0.0.1.tgz#d2ac117f1569ae0ec9315bd3eb1e3cee42661742"
+  integrity sha512-QFAbJq0kjMdBj/Y08EZ6f+3FIB2xWO+vjh/Gdh1RD3o8LRBI5LHfpuYZrU3p/hQB0uDTU8RqBaX+nPbNif4fzw==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

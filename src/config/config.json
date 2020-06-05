@@ -1,0 +1,18 @@
+{
+  "APP_NAME": "OzitagAdmin",
+  "TITLE_TEMPLATE": "Ozitag Admin - {{title}}",
+  "LANGUAGE": "EN",
+  "BRAND": {
+    "small": {
+      "logo-ext": "svg",
+      "name": null,
+      "name-color": null
+    },
+    "large": {
+      "logo-ext": "svg",
+      "name": "Ozitag",
+      "name-color": "#0b2525"
+    }
+  },
+  "IS_SPLASH_SCREEN_ENABLED": false
+}

@@ -14,13 +14,17 @@ registerComponents();
 
 configStore.setConfig(config);
 
-Sentry.init({
-  enabled: process.env.NODE_ENV === 'production',
-  dsn: process.env.VUE_APP_SENTRY_DSN,
-  environment:
-    process.env.VUE_APP_SENTRY_ENVIRONMENT ?? process.env.VUE_APP_ENV,
-  integrations: [new VueIntegration({ Vue, attachProps: true })]
-});
+if (process.env.VUE_APP_SENTRY_DSN) {
+  Sentry.init({
+    enabled: process.env.NODE_ENV === 'production',
+    dsn: process.env.VUE_APP_SENTRY_DSN,
+    environment:
+      process.env.VUE_APP_SENTRY_ENVIRONMENT ??
+      process.env.VUE_APP_ENV ??
+      'default',
+    integrations: [new VueIntegration({ Vue, attachProps: true })]
+  });
+}
 
 new Vue({
   router,

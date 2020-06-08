@@ -1,4 +1,12 @@
+const config = require('./src/config/config.json');
+
 module.exports = {
+  pages: {
+    index: {
+      entry: 'src/main.ts',
+      title: config.TITLE_TEMPLATE.replace(/{{title}}/, 'Home')
+    }
+  },
   publicPath: '/admin',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg');

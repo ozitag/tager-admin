@@ -46,10 +46,14 @@ export type BrandConfig = {
   large: LogoConfig;
 };
 
-export type Breadcrumb = { path: string; label: string };
+export type Breadcrumb = { path: string; label: Nullish<string> };
 
 export type RouteMeta = {
-  getBreadcrumbs: (route: Route) => Array<Breadcrumb>;
+  getBreadcrumbs: (route: CustomRoute) => Array<Breadcrumb>;
+};
+
+export type CustomRoute = Omit<Route, 'meta'> & {
+  meta?: RouteMeta;
 };
 
 export type CustomRouteConfig = Omit<RouteConfig, 'meta'> & {

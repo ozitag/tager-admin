@@ -3,7 +3,8 @@ import VueRouter from 'vue-router';
 import { CONSTANTS } from '@tager/admin-core';
 
 import NotFound from '@/views/NotFound/index.vue';
-import { CustomRouteConfig } from '@/typings/common';
+import { CustomRoute, CustomRouteConfig } from '@/typings/common';
+import config from '@/config/config.json';
 
 Vue.use(VueRouter);
 
@@ -17,10 +18,14 @@ const routes: Array<CustomRouteConfig> = [
   {
     path: '/',
     component: HomePage,
-    meta: { getBreadcrumbs: () => [{ path: '/', label: 'Home' }] }
+    name: 'Home',
+    meta: {
+      getBreadcrumbs: (route: CustomRoute) => [{ path: '/', label: route.name }]
+    }
   },
   {
     path: '*',
+    name: 'NotFound',
     component: NotFound
   }
 ];
@@ -29,6 +34,12 @@ const router = new VueRouter({
   mode: 'history',
   base: CONSTANTS.BASE_PATH,
   routes
+});
+
+router.afterEach(routeTo => {
+  const pageName = routeTo.name ?? 'Not Found';
+
+  document.title = config.TITLE_TEMPLATE.replace(/{{title}}/, pageName);
 });
 
 export default router;

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="image-container">
-      <img v-bind:src="require('@/assets/images/lamp.png')" />
+      <img :src="require('@/assets/images/lamp.png')" />
     </div>
     <div class="content">
       <h1 class="status-code">404</h1>
@@ -10,7 +10,7 @@
         {{ $t('pageNotFoundMessage') }}
       </p>
       <div>
-        <base-button variant="outline-secondary" v-on:click="goToHome">
+        <base-button variant="outline-secondary" @click="goToHome">
           {{ $t('goToHome') }}
         </base-button>
       </div>

@@ -1,5 +1,7 @@
 import Vue from 'vue';
-import { api, configStore } from '@tager/admin-core';
+import { configStore } from '@tager/admin-core';
+import * as Sentry from '@sentry/browser';
+import { Vue as VueIntegration } from '@sentry/integrations';
 
 import '@/assets/css/index.css';
 
@@ -11,6 +13,14 @@ import { registerComponents } from '@/components';
 registerComponents();
 
 configStore.setConfig(config);
+
+Sentry.init({
+  enabled: process.env.NODE_ENV === 'production',
+  dsn: process.env.VUE_APP_SENTRY_DSN,
+  environment:
+    process.env.VUE_APP_SENTRY_ENVIRONMENT ?? process.env.VUE_APP_ENV,
+  integrations: [new VueIntegration({ Vue, attachProps: true })]
+});
 
 new Vue({
   router,

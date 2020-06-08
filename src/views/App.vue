@@ -1,8 +1,5 @@
 <template>
-  <base-layout
-    v-bind:config="config"
-    v-bind:sidebar-menu-list="sidebarMenuList"
-  >
+  <base-layout :config="config" :sidebar-menu-list="sidebarMenuList">
     <router-view />
   </base-layout>
 </template>

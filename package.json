@@ -10,7 +10,7 @@
   "dependencies": {
     "@sentry/browser": "5.15.5",
     "@sentry/integrations": "5.15.5",
-    "@tager/admin-core": "^0.0.2",
+    "@tager/admin-core": "^0.0.4",
     "core-js": "^3.6.4",
     "date-fns": "^2.14.0",
     "lodash": "^4.17.15",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.151",
+    "@types/node": "12.x",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "@vue/cli-plugin-babel": "~4.3.0",

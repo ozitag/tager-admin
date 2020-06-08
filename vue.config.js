@@ -7,7 +7,7 @@ module.exports = {
       title: config.TITLE_TEMPLATE.replace(/{{title}}/, 'Home')
     }
   },
-  publicPath: '/admin',
+  publicPath: process.env.VUE_APP_PUBLIC_PATH || '/',
   chainWebpack: config => {
     const svgRule = config.module.rule('svg');
 

@@ -1,6 +1,5 @@
 import Vue, { CreateElement, VNode } from 'vue';
 import VueRouter from 'vue-router';
-import { CONSTANTS } from '@tager/admin-core';
 
 import NotFound from '@/views/NotFound/index.vue';
 import { CustomRoute, CustomRouteConfig } from '@/typings/common';
@@ -32,7 +31,7 @@ const routes: Array<CustomRouteConfig> = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: CONSTANTS.BASE_PATH,
+  base: process.env.BASE_URL,
   routes
 });
 

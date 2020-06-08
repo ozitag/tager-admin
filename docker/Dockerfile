@@ -17,7 +17,9 @@ RUN yarn install
 
 COPY ./ .
 
-RUN yarn build
+ARG APP_ENV
+
+RUN yarn build --mode ${APP_ENV}
 
 # production stage
 FROM nginx:stable-alpine as production-stage

@@ -1,10 +1,20 @@
-const config = require('./src/config/config.json');
+const SentryCliPlugin = require('@sentry/webpack-plugin');
+
+const appConfig = require('./src/config/config.json');
+
+const isProduction = process.env.NODE_ENV === 'production';
+
+const isSentryEnabled = [
+  process.env.SENTRY_AUTH_TOKEN,
+  process.env.SENTRY_ORG,
+  process.env.SENTRY_PROJECT
+].every(Boolean);
 
 module.exports = {
   pages: {
     index: {
       entry: 'src/main.ts',
-      title: config.TITLE_TEMPLATE.replace(/{{title}}/, 'Home')
+      title: appConfig.TITLE_TEMPLATE.replace(/{{title}}/, 'Home')
     }
   },
   publicPath: process.env.VUE_APP_PUBLIC_PATH || '/',
@@ -20,5 +30,14 @@ module.exports = {
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
       .options({ svgo: { plugins: [{ removeViewBox: false }] } });
+  },
+  configureWebpack: {
+    plugins: [
+      isProduction && isSentryEnabled
+        ? new SentryCliPlugin({
+            include: 'dist'
+          })
+        : null
+    ].filter(Boolean)
   }
 };

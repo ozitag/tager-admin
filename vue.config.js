@@ -1,14 +1,21 @@
+const util = require('util');
 const SentryCliPlugin = require('@sentry/webpack-plugin');
 
 const appConfig = require('./src/config/config.json');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 const isSentryEnabled = [
   process.env.SENTRY_AUTH_TOKEN,
   process.env.SENTRY_ORG,
-  process.env.SENTRY_PROJECT
+  process.env.SENTRY_PROJECT,
+  process.env.NODE_ENV === 'production',
+  process.env.VUE_APP_ENV !== 'local'
 ].every(Boolean);
+
+console.log(
+  util.inspect(`Sentry CLI Plugin enabled: ${isSentryEnabled}`, {
+    colors: true
+  })
+);
 
 module.exports = {
   pages: {
@@ -33,10 +40,11 @@ module.exports = {
   },
   configureWebpack: {
     plugins: [
-      isProduction && isSentryEnabled
+      isSentryEnabled
         ? new SentryCliPlugin({
-            include: 'dist'
-          })
+          include: 'dist',
+          release: '1.0.0'
+        })
         : null
     ].filter(Boolean)
   }

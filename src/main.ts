@@ -19,8 +19,8 @@ if (process.env.VUE_APP_SENTRY_DSN) {
     enabled: process.env.NODE_ENV === 'production',
     dsn: process.env.VUE_APP_SENTRY_DSN,
     environment:
-      process.env.VUE_APP_SENTRY_ENVIRONMENT ??
-      process.env.VUE_APP_ENV ??
+      process.env.VUE_APP_SENTRY_ENVIRONMENT ||
+      process.env.VUE_APP_ENV ||
       'default',
     integrations: [new VueIntegration({ Vue, attachProps: true })]
   });

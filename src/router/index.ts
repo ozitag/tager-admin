@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 const HomePage = Vue.extend({
   render(createElement: CreateElement): VNode {
     return createElement('div', {}, 'Home page');
-  }
+  },
 });
 
 const routes: Array<CustomRouteConfig> = [
@@ -19,23 +19,25 @@ const routes: Array<CustomRouteConfig> = [
     component: HomePage,
     name: 'Home',
     meta: {
-      getBreadcrumbs: (route: CustomRoute) => [{ path: '/', label: route.name }]
-    }
+      getBreadcrumbs: (route: CustomRoute) => [
+        { path: '/', label: route.name },
+      ],
+    },
   },
   {
     path: '*',
     name: 'NotFound',
-    component: NotFound
-  }
+    component: NotFound,
+  },
 ];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
-router.afterEach(routeTo => {
+router.afterEach((routeTo) => {
   const pageName = routeTo.name ?? 'Not Found';
 
   document.title = config.TITLE_TEMPLATE.replace(/{{title}}/, pageName);

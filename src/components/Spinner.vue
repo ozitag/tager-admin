@@ -1,5 +1,5 @@
 <template>
-  <svg class="spinner" viewBox="0 0 50 50" v-bind:style="style" data-spinner>
+  <svg class="spinner" viewBox="0 0 50 50" :style="style" data-spinner>
     <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" />
   </svg>
 </template>
@@ -12,17 +12,17 @@ export default Vue.extend({
   props: {
     size: {
       type: Number,
-      default: 25
-    }
+      default: 25,
+    },
   },
   computed: {
     style() {
       return {
         width: this.size,
-        height: this.size
+        height: this.size,
       };
-    }
-  }
+    },
+  },
 });
 </script>
 

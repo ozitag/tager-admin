@@ -12,15 +12,15 @@ export default Vue.extend({
   props: {
     column: {
       type: Object as () => ColumnDefinition,
-      required: true
+      required: true,
     },
     row: {
       type: Object,
-      required: true
+      required: true,
     },
     scopedSlot: {
-      type: Function
-    }
+      type: Function,
+    },
   },
   render(createElement): VNode {
     const cellType = this.column.type;
@@ -42,7 +42,7 @@ export default Vue.extend({
     const scopedSlotNode = this.scopedSlot
       ? this.scopedSlot({
           row: this.row,
-          column: this.column
+          column: this.column,
         })
       : null;
 
@@ -55,11 +55,11 @@ export default Vue.extend({
       createElement(appropriateCellComponent(), {
         props: {
           row: this.row,
-          column: this.column
-        }
+          column: this.column,
+        },
       })
     );
-  }
+  },
 });
 </script>
 

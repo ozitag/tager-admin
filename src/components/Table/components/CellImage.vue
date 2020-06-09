@@ -1,7 +1,7 @@
 <template>
   <td>
     <div class="cell-inner">
-      <div class="image-wrapper"><img v-bind:src="value" alt="Photo" /></div>
+      <div class="image-wrapper"><img :src="value" alt="Photo" /></div>
     </div>
   </td>
 </template>
@@ -15,18 +15,18 @@ export default Vue.extend({
   props: {
     column: {
       type: Object as () => ColumnDefinition,
-      required: true
+      required: true,
     },
     row: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     value(): string {
       return this.row[this.column.field];
-    }
-  }
+    },
+  },
 });
 </script>
 

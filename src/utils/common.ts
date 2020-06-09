@@ -92,30 +92,30 @@ export function createResourceLoader<DataType>(initialData: DataType) {
       return {
         data: initialData,
         status: FETCH_STATUSES.IDLE,
-        error: null
+        error: null,
       };
     },
     pending(): LoadableData<DataType> {
       return {
         data: initialData,
         status: FETCH_STATUSES.LOADING,
-        error: null
+        error: null,
       };
     },
     fulfill(payload: DataType): LoadableData<DataType> {
       return {
         data: payload,
         status: FETCH_STATUSES.SUCCESS,
-        error: null
+        error: null,
       };
     },
     reject(error?: Nullable<string>): LoadableData<DataType> {
       return {
         data: initialData,
         status: FETCH_STATUSES.FAILURE,
-        error: error ?? null
+        error: error ?? null,
       };
-    }
+    },
   };
 }
 
@@ -128,7 +128,7 @@ export function getOrigin(): string {
 }
 
 export function isAbsoluteUrl(url: string): boolean {
-  return ['https:', 'http:'].some(protocol => url.startsWith(protocol));
+  return ['https:', 'http:'].some((protocol) => url.startsWith(protocol));
 }
 
 export function getAbsoluteUrl(urlOrPath: string): string {

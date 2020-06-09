@@ -1,21 +1,21 @@
 <template>
   <input
-    v-bind:checked="checked"
-    v-on:change="$emit('change', $event.target.checked)"
+    :checked="checked"
     type="checkbox"
+    @change="$emit('change', $event.target.checked)"
   />
 </template>
 
 <script>
 export default {
   name: 'Checkbox',
-  props: {
-    checked: Boolean
-  },
   model: {
     prop: 'checked',
-    event: 'change'
-  }
+    event: 'change',
+  },
+  props: {
+    checked: Boolean,
+  },
 };
 </script>
 

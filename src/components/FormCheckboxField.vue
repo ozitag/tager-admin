@@ -1,13 +1,13 @@
 <template>
   <base-form-group>
     <base-checkbox
-      v-bind:id="name"
-      v-bind:name="name"
-      v-bind:value="value"
-      v-bind:checked="checked"
-      v-on:change="$emit('change', $event)"
+      :id="name"
+      :name="name"
+      :value="value"
+      :checked="checked"
+      @change="$emit('change', $event)"
     />
-    <base-label for-checkbox v-bind:for="name" v-if="Boolean(label)">
+    <base-label v-if="Boolean(label)" for-checkbox :for="name">
       {{ label }}
     </base-label>
   </base-form-group>
@@ -17,20 +17,20 @@
 import Vue from 'vue';
 
 export default Vue.extend({
+  model: {
+    prop: 'checked',
+    event: 'change',
+  },
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     label: String,
     checked: Boolean,
     value: Boolean,
-    error: String
+    error: String,
   },
-  model: {
-    prop: 'checked',
-    event: 'change'
-  }
 });
 </script>
 

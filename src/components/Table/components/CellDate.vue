@@ -12,18 +12,18 @@ export default Vue.extend({
   props: {
     column: {
       type: Object as () => ColumnDefinition,
-      required: true
+      required: true,
     },
     row: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     value() {
       return formatDate(new Date(this.row[this.column.field]));
-    }
-  }
+    },
+  },
 });
 </script>
 

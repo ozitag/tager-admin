@@ -11,12 +11,12 @@ export default Vue.extend({
   props: {
     column: {
       type: Object as () => ColumnDefinition,
-      required: true
+      required: true,
     },
     row: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     value(): string {
@@ -25,8 +25,8 @@ export default Vue.extend({
       return this.column.format
         ? this.column.format(value, this.row, this.column)
         : value;
-    }
-  }
+    },
+  },
 });
 </script>
 

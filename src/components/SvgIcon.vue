@@ -1,5 +1,5 @@
 <template>
-  <component v-bind:is="iconComponent"></component>
+  <component :is="iconComponent"></component>
 </template>
 
 <script lang="ts">
@@ -33,7 +33,7 @@ const ICON_MAP: { [iconName: string]: Component } = {
   menu: MenuIcon,
   settings: SettingsIcon,
   assignment: AssignmentIcon,
-  chevronRight: ChevronRightIcon
+  chevronRight: ChevronRightIcon,
 };
 
 export default Vue.extend({
@@ -44,14 +44,14 @@ export default Vue.extend({
       validator(value: string): boolean {
         return Object.keys(ICON_MAP).includes(value);
       },
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      iconComponent: ICON_MAP[this.name]
+      iconComponent: ICON_MAP[this.name],
     };
-  }
+  },
 });
 </script>
 

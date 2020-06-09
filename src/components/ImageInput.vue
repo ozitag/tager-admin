@@ -3,11 +3,11 @@
     <div
       v-if="shouldDisplayDropbox"
       ref="dropbox"
-      v-bind:class="['drop-zone', isDragOver ? 'highlight' : null]"
-      v-on:dragenter="handleDragEnter"
-      v-on:dragover="handleDragOver"
-      v-on:drop="handleDrop"
-      v-on:dragleave="handleDragLeave"
+      :class="['drop-zone', isDragOver ? 'highlight' : null]"
+      @dragenter="handleDragEnter"
+      @dragover="handleDragOver"
+      @drop="handleDrop"
+      @dragleave="handleDragLeave"
     >
       <div class="upload-message-container">
         <svg-icon name="upload" />
@@ -16,31 +16,27 @@
 
       <label class="file-input-label">
         <input
+          ref="fileInput"
           type="file"
           class="visually-hidden"
           accept="image/*"
-          ref="fileInput"
-          v-bind:multiple="multiple"
-          v-on:change="handleChange"
+          :multiple="multiple"
+          @change="handleChange"
         />
       </label>
     </div>
 
     <div class="image-grid">
-      <div
-        class="image-container"
-        v-for="image of images"
-        v-bind:key="image.id"
-      >
+      <div v-for="image of images" :key="image.id" class="image-container">
         <base-button
           class="clear-button"
           variant="icon"
           title="Clear"
-          v-on:click="clearImage(image.id)"
+          @click="clearImage(image.id)"
         >
           <svg-icon name="clear" />
         </base-button>
-        <img v-bind:src="image.url" />
+        <img :src="image.url" />
       </div>
     </div>
   </div>
@@ -64,7 +60,7 @@ export default Vue.extend({
   name: 'ImageInput',
   model: {
     prop: 'value',
-    event: 'change'
+    event: 'change',
   },
   props: {
     value: {
@@ -73,7 +69,7 @@ export default Vue.extend({
         return Array.isArray(value)
           ? value.every(isImageObject)
           : isImageObject(value) || value === null;
-      }
+      },
     },
     multiple: Boolean,
     maxFileCount: Number,
@@ -84,46 +80,12 @@ export default Vue.extend({
       default: 'default',
       validator(value: string): boolean {
         return ['product', 'product-preset', 'default'].includes(value);
-      }
-    }
-  },
-  watch: {
-    $props: {
-      immediate: true,
-      handler(): void {
-        if (this.multiple) {
-          if (!Array.isArray(this.value) || !this.value.every(isImageObject)) {
-            const message = JSON.stringify(
-              {
-                message: 'ImageInput: value should be Array<ImageType>',
-                value: this.value,
-                multiple: this.multiple
-              },
-              null,
-              4
-            );
-            console.error(message);
-          }
-        } else {
-          if (!isImageObject(this.value) && this.value !== null) {
-            const message = JSON.stringify(
-              {
-                message: 'ImageInput: value should be ImageType or null',
-                value: this.value,
-                multiple: this.multiple
-              },
-              null,
-              4
-            );
-            console.error(message);
-          }
-        }
-      }
-    }
+      },
+    },
   },
   data() {
     return {
-      isDragOver: false
+      isDragOver: false,
     };
   },
   computed: {
@@ -144,7 +106,41 @@ export default Vue.extend({
       }
 
       return true;
-    }
+    },
+  },
+  watch: {
+    $props: {
+      immediate: true,
+      handler(): void {
+        if (this.multiple) {
+          if (!Array.isArray(this.value) || !this.value.every(isImageObject)) {
+            const message = JSON.stringify(
+              {
+                message: 'ImageInput: value should be Array<ImageType>',
+                value: this.value,
+                multiple: this.multiple,
+              },
+              null,
+              4
+            );
+            console.error(message);
+          }
+        } else {
+          if (!isImageObject(this.value) && this.value !== null) {
+            const message = JSON.stringify(
+              {
+                message: 'ImageInput: value should be ImageType or null',
+                value: this.value,
+                multiple: this.multiple,
+              },
+              null,
+              4
+            );
+            console.error(message);
+          }
+        }
+      },
+    },
   },
   methods: {
     handleChange(event: Event) {
@@ -161,28 +157,28 @@ export default Vue.extend({
       console.log('Files: ', fileArray);
 
       Promise.all(
-        fileArray.map(file => {
+        fileArray.map((file) => {
           return api
             .uploadFile<ImageType>({
               file,
-              scenario: this.scenario as FileUploadScenario
+              scenario: this.scenario as FileUploadScenario,
             })
-            .then(response => {
+            .then((response) => {
               console.log('response', response);
               return response;
             })
-            .catch(error => {
+            .catch((error) => {
               console.error(error);
               return null;
             });
         })
       )
-        .then(images => {
+        .then((images) => {
           const newImages = [...this.images, ...images].filter(notEmpty);
 
           this.emitChangeEvent(newImages);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error(error);
 
           /** Clear value of file input */
@@ -223,7 +219,7 @@ export default Vue.extend({
       this.handleFiles(dataTransfer?.files ?? null);
     },
     clearImage(imageId: number): void {
-      const newImages = this.images.filter(image => image.id !== imageId);
+      const newImages = this.images.filter((image) => image.id !== imageId);
       this.emitChangeEvent(newImages);
     },
     emitChangeEvent(newImages: Array<ImageType>): void {
@@ -231,8 +227,8 @@ export default Vue.extend({
 
       console.log('emit change', newValue);
       this.$emit('change', newValue);
-    }
-  }
+    },
+  },
 });
 </script>
 

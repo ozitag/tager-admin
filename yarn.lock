@@ -943,10 +943,10 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.0.tgz#623aa40623550e3b94767cffeb096a6fb597ed09"
   integrity sha512-9GvTek+7cVw7r+L7TNGOG1astZJWXz2h5q4BqMXl28KN+24iSCm1xo+RhZOZvwdT3bzNe9hD7riJc/lBoO7mgg==
 
-"@tager/admin-core@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@tager/admin-core/-/admin-core-0.0.4.tgz#83a24af67f9e8b504db08586eec6b8c9c26955a4"
-  integrity sha512-rtRXQissc84JXC1AEpVuNiXOGj2DxLn9VHEhgZVq1YmIiV40J5DbNllSxZFCPIQu5CSTi8qTI2RG2tQy3Yq9Ig==
+"@tager/admin-core@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@tager/admin-core/-/admin-core-0.0.7.tgz#33c4f7c0393167da20dca913e75f5cca7e0f582a"
+  integrity sha512-rZdXIWXpkAiLiVVWXFrFKcy+7uRln/rXZGvDa21SO2Yi5cRDnfHVUksA5Dg6dM9SqH7zxc0maL5EoVI43SLW8g==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

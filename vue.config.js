@@ -3,6 +3,27 @@ const SentryCliPlugin = require('@sentry/webpack-plugin');
 
 const appConfig = require('./src/config/config.json');
 
+function colorLog(message) {
+  console.log(
+    util.inspect(message, {
+      colors: true
+    })
+  );
+}
+
+function setAppVersion() {
+  try {
+    const app = require('./src/config/app.json');
+    process.env.VUE_APP_VERSION = app.version;
+  } catch (error) {
+    if (error.code === 'MODULE_NOT_FOUND') {
+      colorLog('app.json is not found!');
+    } else {
+      throw error;
+    }
+  }
+}
+
 const isSentryEnabled = [
   process.env.SENTRY_AUTH_TOKEN,
   process.env.SENTRY_ORG,
@@ -11,11 +32,9 @@ const isSentryEnabled = [
   process.env.VUE_APP_ENV !== 'local'
 ].every(Boolean);
 
-console.log(
-  util.inspect(`Sentry CLI Plugin enabled: ${isSentryEnabled}`, {
-    colors: true
-  })
-);
+colorLog(`Sentry CLI Plugin enabled: ${isSentryEnabled}`);
+
+setAppVersion();
 
 module.exports = {
   pages: {
@@ -42,9 +61,9 @@ module.exports = {
     plugins: [
       isSentryEnabled
         ? new SentryCliPlugin({
-          include: 'dist',
-          release: '1.0.0'
-        })
+            include: 'dist',
+            release: '1.0.0'
+          })
         : null
     ].filter(Boolean)
   }

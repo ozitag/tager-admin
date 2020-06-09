@@ -22,11 +22,11 @@ if (process.env.VUE_APP_SENTRY_DSN) {
       process.env.VUE_APP_SENTRY_ENVIRONMENT ||
       process.env.VUE_APP_ENV ||
       'default',
-    integrations: [new VueIntegration({ Vue, attachProps: true })]
+    integrations: [new VueIntegration({ Vue, attachProps: true })],
   });
 }
 
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount('#app');

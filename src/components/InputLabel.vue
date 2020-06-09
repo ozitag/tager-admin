@@ -1,5 +1,5 @@
 <template>
-  <label v-bind:class="mainClass"><slot></slot></label>
+  <label :class="mainClass"><slot></slot></label>
 </template>
 
 <script>
@@ -7,14 +7,14 @@ export default {
   name: 'InputLabel',
   props: {
     forCheckbox: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
-  data: function() {
+  data: function () {
     return {
-      mainClass: this.forCheckbox ? 'checkbox-label' : ''
+      mainClass: this.forCheckbox ? 'checkbox-label' : '',
     };
-  }
+  },
 };
 </script>
 

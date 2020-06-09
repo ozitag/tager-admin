@@ -3,39 +3,39 @@
     <table>
       <thead>
         <tr>
-          <th v-for="column of columnDefs" v-bind:key="column.id">
+          <th v-for="column of columnDefs" :key="column.id">
             {{ column.name }}
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row of rowData" v-bind:key="row.id">
+        <tr v-for="row of rowData" :key="row.id">
           <base-table-cell
             v-for="column of columnDefs"
-            v-bind:key="column.id"
-            v-bind:row="row"
-            v-bind:column="column"
-            v-bind:scoped-slot="getCellSlot(column.field)"
+            :key="column.id"
+            :row="row"
+            :column="column"
+            :scoped-slot="getCellSlot(column.field)"
           >
           </base-table-cell>
         </tr>
       </tbody>
     </table>
 
-<!--    <div class="bottom">-->
-<!--      <span>Showing 1 to 10 of 57 entries</span>-->
-<!--      <div class="pagination">-->
-<!--        <ul>-->
-<!--          <li><button disabled>Previous</button></li>-->
-<!--          <li><button>1</button></li>-->
-<!--          <li><button>2</button></li>-->
-<!--          <li><button class="active">3</button></li>-->
-<!--          <li><button>4</button></li>-->
-<!--          <li><button>5</button></li>-->
-<!--          <li><button>Next</button></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
+    <!--    <div class="bottom">-->
+    <!--      <span>Showing 1 to 10 of 57 entries</span>-->
+    <!--      <div class="pagination">-->
+    <!--        <ul>-->
+    <!--          <li><button disabled>Previous</button></li>-->
+    <!--          <li><button>1</button></li>-->
+    <!--          <li><button>2</button></li>-->
+    <!--          <li><button class="active">3</button></li>-->
+    <!--          <li><button>4</button></li>-->
+    <!--          <li><button>5</button></li>-->
+    <!--          <li><button>Next</button></li>-->
+    <!--        </ul>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -50,19 +50,19 @@ export default Vue.extend({
   props: {
     columnDefs: {
       type: Array as () => Array<ColumnDefinition>,
-      required: true
+      required: true,
     },
     rowData: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     getCellSlot(columnField: string): NormalizedScopedSlot | undefined {
       const slotName = `cell(${kebabCase(columnField)})`;
       return this.$scopedSlots[slotName];
-    }
-  }
+    },
+  },
 });
 </script>
 

@@ -1,9 +1,9 @@
 <template>
   <input
-    v-bind:value="value"
-    v-on:input="$emit('input', $event.target.value)"
-    v-on:change="$emit('change', $event.target.value)"
-    v-bind:type="type"
+    :value="value"
+    :type="type"
+    @input="$emit('input', $event.target.value)"
+    @change="$emit('change', $event.target.value)"
   />
 </template>
 
@@ -19,8 +19,8 @@ export default Vue.extend({
       default: 'text',
       validator(value: string): boolean {
         return ['text', 'number', 'email', 'password', 'date'].includes(value);
-      }
-    }
+      },
+    },
   },
   methods: {
     // emitWithLog(eventName: string, event: string) {
@@ -37,7 +37,7 @@ export default Vue.extend({
     //     console.log('isValid', [isValid, newValue, this.value]);
     //     this.$emit('input', isValid ? newValue : this.value);
     //   }
-  }
+  },
 });
 </script>
 

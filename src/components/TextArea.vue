@@ -1,16 +1,13 @@
 <template>
-  <textarea
-    v-bind:value="value"
-    v-on:input="$emit('input', $event.target.value)"
-  />
+  <textarea :value="value" @input="$emit('input', $event.target.value)" />
 </template>
 
 <script>
 export default {
   name: 'TextArea',
   props: {
-    value: String
-  }
+    value: String,
+  },
 };
 </script>
 

@@ -1,21 +1,21 @@
 <template>
   <base-form-group>
-    <base-label v-bind:for="name" v-if="Boolean(label)">{{ label }}</base-label>
+    <base-label v-if="Boolean(label)" :for="name">{{ label }}</base-label>
     <base-textarea
       v-if="type === 'textarea'"
-      v-bind:id="name"
-      v-bind:name="name"
-      v-bind:value="value"
-      v-on:input="$emit('input', $event)"
+      :id="name"
+      :name="name"
+      :value="value"
+      @input="$emit('input', $event)"
     />
     <base-input
       v-else
-      v-bind:id="name"
-      v-bind:name="name"
-      v-bind:type="type"
-      v-bind:value="value"
-      v-on:input="$emit('input', $event)"
-      v-on:change="$emit('change', $event)"
+      :id="name"
+      :name="name"
+      :type="type"
+      :value="value"
+      @input="$emit('input', $event)"
+      @change="$emit('change', $event)"
     />
 
     <base-form-error v-if="Boolean(error)">{{ error }}</base-form-error>
@@ -30,7 +30,7 @@ export default Vue.extend({
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     label: String,
     value: String,
@@ -44,18 +44,18 @@ export default Vue.extend({
           'email',
           'password',
           'date',
-          'textarea'
+          'textarea',
         ].includes(value);
-      }
+      },
     },
-    error: String
+    error: String,
   },
   methods: {
     emitWithLog(eventName: string, event: Event) {
       console.log('FormField Event: ', eventName, event);
       this.$emit(eventName, event);
-    }
-  }
+    },
+  },
 });
 </script>
 

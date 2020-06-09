@@ -1,6 +1,6 @@
 <template>
   <td>
-    <a v-bind:href="value">{{ label }}</a>
+    <a :href="value">{{ label }}</a>
   </td>
 </template>
 
@@ -13,12 +13,12 @@ export default Vue.extend({
   props: {
     column: {
       type: Object as () => ColumnDefinition,
-      required: true
+      required: true,
     },
     row: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     value(): string {
@@ -34,8 +34,8 @@ export default Vue.extend({
       }
 
       return this.value;
-    }
-  }
+    },
+  },
 });
 </script>
 

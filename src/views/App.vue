@@ -17,9 +17,9 @@ export default Vue.extend({
   data() {
     return {
       config,
-      sidebarMenuList: MENU_ITEM_LIST
+      sidebarMenuList: MENU_ITEM_LIST,
     };
-  }
+  },
 });
 </script>
 

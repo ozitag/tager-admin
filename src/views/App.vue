@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { BaseLayout } from '@tager/admin-core';
+import { BaseLayout } from '@tager/admin-layout';
 
 import config from '@/config/config.json';
 import { MENU_ITEM_LIST } from '@/config/sidebarMenu';

@@ -756,6 +756,13 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+"@babel/runtime@^7.10.2":
+  version "7.10.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
+  integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
@@ -943,10 +950,25 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.0.tgz#623aa40623550e3b94767cffeb096a6fb597ed09"
   integrity sha512-9GvTek+7cVw7r+L7TNGOG1astZJWXz2h5q4BqMXl28KN+24iSCm1xo+RhZOZvwdT3bzNe9hD7riJc/lBoO7mgg==
 
-"@tager/admin-core@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@tager/admin-core/-/admin-core-0.0.7.tgz#33c4f7c0393167da20dca913e75f5cca7e0f582a"
-  integrity sha512-rZdXIWXpkAiLiVVWXFrFKcy+7uRln/rXZGvDa21SO2Yi5cRDnfHVUksA5Dg6dM9SqH7zxc0maL5EoVI43SLW8g==
+"@tager/admin-layout@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.0.1.tgz#0a87084738ead8896517c512fc8847b09585d6c4"
+  integrity sha512-+Yr3oneH+LrS9/M7+FdWSd+yvQ3kMBQuUh8AzzYjThBIpm6Q4FYaktF1mpj+9lken3VmGlIBIL8NOkb4qXxpaQ==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
+
+"@tager/admin-services@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.0.2.tgz#c1e2747bda83c30442d7b32bd6d1cbb32ada82bc"
+  integrity sha512-wfk3awdJh/VV4bptzCwjGf3Hy2Zpx2yN8Ag8PdMrHt4VeF2jycfi7Sz5BQxYXqLX9B6Idf/4YxBqAoszKq1j7w==
+
+"@tager/admin-ui@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.0.2.tgz#f9c9d475b9382e104fbc4ab7b0dd2e7916d21a46"
+  integrity sha512-gyXZ2yotmi36K/moU7R6RQonIENZRjpIiR8scVtvVhgLELRCLPAgez3q2XP8rLcldRREAI6y6MsWHphytE65jw==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
+    lodash.kebabcase "^4.1.1"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

@@ -12,7 +12,9 @@
   "dependencies": {
     "@sentry/browser": "5.15.5",
     "@sentry/integrations": "5.15.5",
-    "@tager/admin-core": "^0.0.7",
+    "@tager/admin-layout": "^0.0.1",
+    "@tager/admin-services": "^0.0.2",
+    "@tager/admin-ui": "^0.0.2",
     "core-js": "^3.6.4",
     "date-fns": "^2.14.0",
     "lodash": "^4.17.15",

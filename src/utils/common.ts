@@ -2,7 +2,7 @@ import round from 'lodash/round';
 
 import { ErrorsMap, LoadableData, Nullable } from '@/typings/common';
 import { FETCH_STATUSES } from '@/constants/common';
-import { RequestError } from '@tager/admin-core';
+import { RequestError } from '@tager/admin-services';
 
 function getNumberSign(value: number): string {
   return value === 0 ? '' : value > 0 ? '+' : '-';

@@ -950,22 +950,22 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.0.tgz#623aa40623550e3b94767cffeb096a6fb597ed09"
   integrity sha512-9GvTek+7cVw7r+L7TNGOG1astZJWXz2h5q4BqMXl28KN+24iSCm1xo+RhZOZvwdT3bzNe9hD7riJc/lBoO7mgg==
 
-"@tager/admin-layout@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.0.1.tgz#0a87084738ead8896517c512fc8847b09585d6c4"
-  integrity sha512-+Yr3oneH+LrS9/M7+FdWSd+yvQ3kMBQuUh8AzzYjThBIpm6Q4FYaktF1mpj+9lken3VmGlIBIL8NOkb4qXxpaQ==
+"@tager/admin-layout@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.0.3.tgz#453a10647afcbba9dd2dea51ad88ed60baf17847"
+  integrity sha512-ZP4I0BICxz2sxM/uoMjn0I58NUOh46T/G436D5JsK1SutyrKJko2hAx0h6LM/Op3b+2Wxv4+MB71unM8ddbxJA==
   dependencies:
     "@babel/runtime" "^7.10.2"
 
-"@tager/admin-services@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.0.2.tgz#c1e2747bda83c30442d7b32bd6d1cbb32ada82bc"
-  integrity sha512-wfk3awdJh/VV4bptzCwjGf3Hy2Zpx2yN8Ag8PdMrHt4VeF2jycfi7Sz5BQxYXqLX9B6Idf/4YxBqAoszKq1j7w==
+"@tager/admin-services@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.0.3.tgz#18639b70f83973b3caabab8d40350e7953fd1a82"
+  integrity sha512-sdZnRHW+xh5mFO+r4Kp08co398B16l8Cq2lJ9jv6I3qvdSU0SH8D5Df7XnDDouifMCW7hi6mIUVkW728p/OwCQ==
 
-"@tager/admin-ui@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.0.2.tgz#f9c9d475b9382e104fbc4ab7b0dd2e7916d21a46"
-  integrity sha512-gyXZ2yotmi36K/moU7R6RQonIENZRjpIiR8scVtvVhgLELRCLPAgez3q2XP8rLcldRREAI6y6MsWHphytE65jw==
+"@tager/admin-ui@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.0.4.tgz#84b4dc67c902836dca92d022d1363b6aa4bc472c"
+  integrity sha512-pBsnZUyJwHX3qBtF1C/LcIzNkjmruhpR/Z4c9wpnC54LTslqh8/wQbq9SayMfFPHt0NGftK9/Zl9K4JkccDX6w==
   dependencies:
     "@babel/runtime" "^7.10.2"
     lodash.kebabcase "^4.1.1"
@@ -8666,10 +8666,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@~3.8.3:
-  version "3.8.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
-  integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
+typescript@~3.9.5:
+  version "3.9.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
+  integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
 
 uglify-js@3.4.x:
   version "3.4.10"
@@ -8936,10 +8936,10 @@ vue-loader@^15.9.1:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-router@^3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
-  integrity sha512-GYhn2ynaZlysZMkFE5oCHRUTqE8BWs/a9YbKpNLi0i7xD6KG1EzDqpHQmv1F5gXjr8kL5iIVS8EOtRaVUEXTqA==
+vue-router@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.3.2.tgz#0099de402edb2fe92f9711053ab5a2156f239cad"
+  integrity sha512-5sEbcfb7MW8mY8lbUVbF4kgcipGXsagkM/X+pb6n0MhjP+RorWIUTPAPSqgPaiPOxVCXgAItBl8Vwz8vq78faA==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"

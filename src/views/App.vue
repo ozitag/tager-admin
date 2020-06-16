@@ -1,5 +1,5 @@
 <template>
-  <base-layout :config="config" :sidebar-menu-list="sidebarMenuList">
+  <base-layout :sidebar-menu-list="sidebarMenuList">
     <router-view />
   </base-layout>
 </template>
@@ -8,7 +8,6 @@
 import Vue from 'vue';
 import { BaseLayout } from '@tager/admin-layout';
 
-import config from '@/config/config.json';
 import { MENU_ITEM_LIST } from '@/config/sidebarMenu';
 
 export default Vue.extend({
@@ -16,7 +15,6 @@ export default Vue.extend({
   components: { BaseLayout },
   data() {
     return {
-      config,
       sidebarMenuList: MENU_ITEM_LIST,
     };
   },

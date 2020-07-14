@@ -8,14 +8,15 @@
     "serve": "serve -s dist",
     "build-serve": "yarn build && yarn serve",
     "lint": "vue-cli-service lint",
-    "tager-update": "yarn upgrade --latest @tager/admin-services @tager/admin-layout @tager/admin-ui @tager/admin-blog"
+    "tager:update": "yarn upgrade --latest @tager/admin-services @tager/admin-layout @tager/admin-ui",
+    "yalc:clean": "yalc remove --all"
   },
   "dependencies": {
     "@sentry/browser": "5.19.2",
     "@sentry/integrations": "5.19.2",
     "@tager/admin-layout": "^0.2.17",
     "@tager/admin-services": "^0.1.6",
-    "@tager/admin-ui": "^0.4.18",
+    "@tager/admin-ui": "^0.4.19",
     "core-js": "^3.6.4",
     "date-fns": "^2.14.0",
     "lodash": "^4.17.19",

@@ -1,18 +1,15 @@
 <template>
-  <base-layout :sidebar-menu-list="sidebarMenuList">
+  <page-layout :sidebar-menu-list="sidebarMenuList">
     <router-view />
-  </base-layout>
+  </page-layout>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { BaseLayout } from '@tager/admin-layout';
-
 import { MENU_ITEM_LIST } from '@/config/sidebarMenu';
 
 export default Vue.extend({
   name: 'App',
-  components: { BaseLayout },
   data() {
     return {
       sidebarMenuList: MENU_ITEM_LIST,

@@ -6,7 +6,7 @@ const appConfig = require('./src/config/config.json');
 function colorLog(message) {
   console.log(
     util.inspect(message, {
-      colors: true
+      colors: true,
     })
   );
 }
@@ -29,7 +29,7 @@ const isSentryEnabled = [
   process.env.SENTRY_ORG,
   process.env.SENTRY_PROJECT,
   process.env.NODE_ENV === 'production',
-  process.env.VUE_APP_ENV !== 'local'
+  process.env.VUE_APP_ENV !== 'local',
 ].every(Boolean);
 
 colorLog(`Sentry CLI Plugin enabled: ${isSentryEnabled}`);
@@ -40,11 +40,11 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.ts',
-      title: appConfig.TITLE_TEMPLATE.replace(/{{title}}/, 'Home')
-    }
+      title: appConfig.TITLE_TEMPLATE.replace(/{{title}}/, 'Home'),
+    },
   },
   publicPath: process.env.VUE_APP_PUBLIC_PATH || '/',
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     const svgRule = config.module.rule('svg');
 
     svgRule.uses.clear();
@@ -56,15 +56,14 @@ module.exports = {
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
       .options({ svgo: { plugins: [{ removeViewBox: false }] } });
+
+    if (isSentryEnabled) {
+      config.plugin('sentry').use(SentryCliPlugin, [
+        {
+          include: 'dist',
+          release: '1.0.0',
+        },
+      ]);
+    }
   },
-  configureWebpack: {
-    plugins: [
-      isSentryEnabled
-        ? new SentryCliPlugin({
-            include: 'dist',
-            release: '1.0.0'
-          })
-        : null
-    ].filter(Boolean)
-  }
 };

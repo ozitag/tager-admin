@@ -1,33 +1,46 @@
 import Vue from 'vue';
-import { configStore } from '@tager/admin-services';
+
 import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';
+
+import { configStore, i18n } from '@tager/admin-services';
 import { AdminUiPlugin } from '@tager/admin-ui';
+import { AdminLayoutPlugin } from '@tager/admin-layout';
 
 import '@tager/admin-ui/dist/admin-ui.css';
+
 import '@/assets/css/index.css';
 
 import router from '@/router';
+
 import config from '@/config/config.json';
+
 import App from '@/views/App.vue';
 
 configStore.setConfig(config);
 
 if (process.env.VUE_APP_SENTRY_DSN) {
   Sentry.init({
-    enabled: process.env.NODE_ENV === 'production',
+    enabled:
+      process.env.NODE_ENV === 'production' &&
+      process.env.VUE_APP_ENV !== 'local',
     dsn: process.env.VUE_APP_SENTRY_DSN,
-    environment:
-      process.env.VUE_APP_SENTRY_ENVIRONMENT ||
-      process.env.VUE_APP_ENV ||
-      'default',
+    environment: [
+      process.env.VUE_APP_SENTRY_ENVIRONMENT,
+      process.env.VUE_APP_ENV,
+    ].join('_'),
     integrations: [new VueIntegration({ Vue, attachProps: true })],
   });
 }
 
 Vue.use(AdminUiPlugin);
+Vue.use(AdminLayoutPlugin);
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount('#app');
+i18n.init().then(() => {
+  Vue.use(i18n.getPlugin());
+
+  new Vue({
+    router,
+    render: (h) => h(App),
+  }).$mount('#app');
+});

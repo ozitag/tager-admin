@@ -1,15 +1,10 @@
-import Vue, { CreateElement, VNode } from 'vue';
 import { createRouter, CustomRouteConfig } from '@tager/admin-layout';
 
-const HomePage = Vue.extend({
-  render(createElement: CreateElement): VNode {
-    return createElement('div', {}, 'Home page');
-  },
-});
+import Home from '@/views/Home.vue';
 
 export const HOME_ROUTE: CustomRouteConfig = {
   path: '/',
-  component: HomePage,
+  component: Home,
   name: 'Home',
   meta: {
     getBreadcrumbs: (route) => [{ path: '/', label: route.name }],

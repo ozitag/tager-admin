@@ -25,6 +25,8 @@ function setAppVersion() {
 }
 
 const isSentryEnabled = [
+  process.env.VUE_APP_SENTRY_DSN,
+  process.env.VUE_APP_SENTRY_ENVIRONMENT,
   process.env.SENTRY_AUTH_TOKEN,
   process.env.SENTRY_ORG,
   process.env.SENTRY_PROJECT,

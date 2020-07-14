@@ -20,9 +20,7 @@ COPY ./ .
 # Uncomment if you need app.json from project root
 # COPY ./app.json ./src/config/
 
-ARG APP_ENV
-
-RUN yarn build --mode ${APP_ENV}
+RUN yarn build
 
 # production stage
 FROM nginx:stable-alpine as production-stage

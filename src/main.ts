@@ -1,7 +1,8 @@
-import Vue from 'vue';
+import Vue, { CreateElement } from 'vue';
 
 import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';
+import VueCompositionApi, { createApp } from '@vue/composition-api';
 
 import { configStore, i18n } from '@tager/admin-services';
 import { AdminUiPlugin } from '@tager/admin-ui';
@@ -33,14 +34,20 @@ if (process.env.VUE_APP_SENTRY_DSN) {
   });
 }
 
+Vue.use(VueCompositionApi);
 Vue.use(AdminUiPlugin);
 Vue.use(AdminLayoutPlugin);
 
 i18n.init().then(() => {
-  Vue.use(i18n.getPlugin());
-
-  new Vue({
+  const app = createApp({
     router,
-    render: (h) => h(App),
-  }).$mount('#app');
+    render: (h: CreateElement) => h(App),
+  });
+
+  app.use(VueCompositionApi);
+  app.use(i18n.getPlugin());
+  app.use(AdminUiPlugin);
+  app.use(AdminLayoutPlugin);
+
+  app.mount('#app');
 });

@@ -3,15 +3,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent, ref } from '@vue/composition-api';
 import { NavigationGridItem } from '@tager/admin-ui';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Home',
-  computed: {
-    navItemList(): Array<NavigationGridItem> {
-      return [];
-    },
+  setup() {
+    const navItemList = ref<Array<NavigationGridItem>>([]);
+
+    return {
+      navItemList,
+    };
   },
 });
 </script>

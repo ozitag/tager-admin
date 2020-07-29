@@ -1200,24 +1200,24 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.0.tgz#623aa40623550e3b94767cffeb096a6fb597ed09"
   integrity sha512-9GvTek+7cVw7r+L7TNGOG1astZJWXz2h5q4BqMXl28KN+24iSCm1xo+RhZOZvwdT3bzNe9hD7riJc/lBoO7mgg==
 
-"@tager/admin-layout@^0.2.17":
-  version "0.2.17"
-  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.2.17.tgz#88ffddb3cd12ff29c836b47598552fc3420f6f07"
-  integrity sha512-Sa4crkZnftP4sXc43B5D3Vgv6cT32rBAFgj93oIs6VSKeAM12pdGMMF05sgfMI5gTPZySnFF2vx5ayiZpDGIjw==
+"@tager/admin-layout@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.3.0.tgz#5ff60f28ec088a3a4181182bf8ab3b4fa04ac388"
+  integrity sha512-pWm/DC7L49+b5cuX8ko7xyujE441P0MwMQiCq80u/7dScvszxEufSj+yXYl7ckYO8m8Qb3vsZjKrs6cNWbq5dg==
   dependencies:
     "@babel/runtime" "^7.10.4"
 
-"@tager/admin-services@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.1.6.tgz#ec300e279af67f478433bc09a1313a6a03fb4b52"
-  integrity sha512-QZgYprMn5LRkicfHOZZLQFDGPX+z0vC7Gex6A+mvoWgb7tcUT7csIx6AxOd0DksNHnXZnvUNRA8Ae/6MMF9RdA==
+"@tager/admin-services@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.2.0.tgz#b7c4fe0bb6fe1270959e7685f1a360f401ee2573"
+  integrity sha512-I7/7XQXLvdxsFE7noKNZHQrfPADw4bLDoV4YuipEcZ3U67ILmnfM+njxfHWGPK2bTo3bqQjEw0A1SGHdFhFv9Q==
   dependencies:
-    i18next "^19.5.4"
+    i18next "^19.6.3"
 
-"@tager/admin-ui@^0.4.19":
-  version "0.4.19"
-  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.4.19.tgz#bf1e7dd2feb1196184c96629c37f6dce6699bc28"
-  integrity sha512-g5F55ufjjEMidaxbMy6wpl6RgM5HbDniadPQElqGru+6HIxONIJD5GX07siG7bhkGmrKqNJEuIWc8C2JreBcGg==
+"@tager/admin-ui@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.5.2.tgz#faa1312ac40e38a1920c7700e69f551919290635"
+  integrity sha512-tyM8Ru1zYZ4PcfXGU3lVwAfJ6JlDZt362L2KUo0zzAX4RvRvuQ1Y+lnT9c3xJ4qCPO4lIR+jfg4hz8Ln/RH9Yg==
   dependencies:
     "@babel/runtime" "^7.10.2"
     "@ckeditor/ckeditor5-build-classic" "^19.0.2"
@@ -1571,6 +1571,13 @@
     vue-template-es2015-compiler "^1.9.0"
   optionalDependencies:
     prettier "^1.18.2"
+
+"@vue/composition-api@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-beta.6.tgz#d526b31f09acdffd0e9424c53cd9f8ffaef10408"
+  integrity sha512-Gz7w4bALSPkM37AbQDZubXjbRs850GwKeZr5bUFXrhW2MuyvS6r9euKWMAu/jwJmNaVc4ZLYaGLjNDQrGcHGGw==
+  dependencies:
+    tslib "^2.0.0"
 
 "@vue/eslint-config-prettier@^6.0.0":
   version "6.0.0"
@@ -4978,10 +4985,10 @@ human-signals@^1.1.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
 
-i18next@^19.5.4:
-  version "19.6.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.6.0.tgz#3881b8e476e494dcdadcc8983e594080417fd82e"
-  integrity sha512-t+pA7iN2WtwS1UQc4PFKHDIO4HYZIl2Wo8UC8gqt70Q1qY50FflAF5vV4IbQEqy4DuK3I9wv3BL1PMvkk238WA==
+i18next@^19.6.3:
+  version "19.6.3"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.6.3.tgz#ce2346161b35c4c5ab691b0674119c7b349c0817"
+  integrity sha512-eYr98kw/C5z6kY21ti745p4IvbOJwY8F2T9tf/Lvy5lFnYRqE45+bppSgMPmcZZqYNT+xO0N0x6rexVR2wtZZQ==
   dependencies:
     "@babel/runtime" "^7.10.1"
 
@@ -8904,6 +8911,11 @@ tslib@^1.9.3:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
   integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+
+tslib@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
+  integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
 
 tslint@^5.20.1:
   version "5.20.1"

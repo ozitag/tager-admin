@@ -5,12 +5,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from '@vue/composition-api';
+
 import { MENU_ITEM_LIST } from '@/config/sidebarMenu';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'App',
-  data() {
+  setup() {
     return {
       sidebarMenuList: MENU_ITEM_LIST,
     };

@@ -35,8 +35,6 @@ if (process.env.VUE_APP_SENTRY_DSN) {
 }
 
 Vue.use(VueCompositionApi);
-Vue.use(AdminUiPlugin);
-Vue.use(AdminLayoutPlugin);
 
 i18n.init().then(() => {
   const app = createApp({
@@ -44,7 +42,6 @@ i18n.init().then(() => {
     render: (h: CreateElement) => h(App),
   });
 
-  app.use(VueCompositionApi);
   app.use(i18n.getPlugin());
   app.use(AdminUiPlugin);
   app.use(AdminLayoutPlugin);

@@ -19,7 +19,7 @@
     </head>
     <body>
         <script>
-          const containsToken = Boolean(localStorage.getItem('accessToken'));
+          const containsToken = Boolean(localStorage.getItem('admin_access_token'));
           const isProduction = '<%= NODE_ENV %>' === 'production';
 
           if (!containsToken && isProduction) {

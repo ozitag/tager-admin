@@ -13,10 +13,11 @@ import '@tager/admin-ui/dist/admin-ui.css';
 import '@/assets/css/index.css';
 
 import router from '@/router';
-
 import config from '@/config/config.json';
-
 import App from '@/views/App.vue';
+
+import EN from '@/locales/en';
+import RU from '@/locales/ru';
 
 configStore.setConfig(config);
 
@@ -36,7 +37,10 @@ if (process.env.VUE_APP_SENTRY_DSN) {
 
 Vue.use(VueCompositionApi);
 
-i18n.init().then(() => {
+i18n.addTranslations('en', 'admin', EN);
+i18n.addTranslations('ru', 'admin', RU);
+
+i18n.init({ debug: false }).then(() => {
   const app = createApp({
     router,
     render: (h: CreateElement) => h(App),

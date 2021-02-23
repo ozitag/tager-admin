@@ -5,15 +5,43 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { computed, defineComponent, SetupContext } from '@vue/composition-api';
 
-import { MENU_ITEM_LIST } from '@/config/sidebarMenu';
+import { useTranslation } from '@tager/admin-ui';
+import { MenuItemType } from '@tager/admin-layout';
+import { getLinks } from '@/constants/links';
 
 export default defineComponent({
   name: 'App',
-  setup() {
+  setup(props, context: SetupContext) {
+    const { t } = useTranslation(context);
+
+    const links = computed(() => getLinks(t));
+
+    const sidebarMenuList: Array<MenuItemType> = [
+      { id: 'home', icon: 'home', ...links.value.HOME },
+      {
+        id: 'settings',
+        icon: 'settings',
+        text: t('admin:settings'),
+        children: [links.value.SETTINGS_COMMON, links.value.SEO_SETTINGS],
+      },
+      {
+        id: 'email',
+        text: t('admin:eMail'),
+        icon: 'viewList',
+        children: [links.value.EMAIL_TEMPLATE_LIST, links.value.EMAIL_LOG_LIST],
+      },
+      {
+        id: 'admins',
+        text: t('admin:administrators'),
+        icon: 'settings',
+        children: [links.value.ADMIN_ADMINS, links.value.ADMIN_ROLES],
+      },
+    ];
+
     return {
-      sidebarMenuList: MENU_ITEM_LIST,
+      sidebarMenuList,
     };
   },
 });

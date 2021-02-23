@@ -1,6 +1,6 @@
 {
   "name": "frontend-new",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve --mode local",
@@ -14,9 +14,15 @@
   "dependencies": {
     "@sentry/browser": "5.23.0",
     "@sentry/integrations": "5.23.0",
-    "@tager/admin-layout": "^0.4.2",
-    "@tager/admin-services": "^0.2.8",
-    "@tager/admin-ui": "^0.6.13",
+    "@tager/admin-administrators": "^0.2.2",
+    "@tager/admin-dynamic-field": "^0.1.14",
+    "@tager/admin-layout": "^0.4.13",
+    "@tager/admin-mail": "^0.3.5",
+    "@tager/admin-pages": "^0.3.8",
+    "@tager/admin-seo": "^0.3.3",
+    "@tager/admin-services": "^0.2.20",
+    "@tager/admin-settings": "^0.3.10",
+    "@tager/admin-ui": "^0.8.41",
     "@vue/composition-api": "^1.0.0-beta.13",
     "core-js": "^3.6.4",
     "date-fns": "^2.16.1",

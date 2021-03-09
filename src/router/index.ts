@@ -5,7 +5,7 @@ import {
   EMAIL_TEMPLATE_FORM_ROUTE,
   EMAIL_TEMPLATE_LIST_ROUTE,
 } from '@tager/admin-mail';
-import { SEO_SETTINGS_ROUTE } from '@tager/admin-seo';
+import { SEO_SETTINGS_ROUTE, SEO_TEMPLATES_ROUTE } from '@tager/admin-seo';
 import {
   SETTINGS_ITEM_FORM_ROUTE,
   SETTINGS_ITEM_LIST_ROUTE,
@@ -39,6 +39,7 @@ const router = createRouter({
     SETTINGS_ITEM_FORM_ROUTE,
     SETTINGS_ITEM_LIST_ROUTE,
     SEO_SETTINGS_ROUTE,
+    SEO_TEMPLATES_ROUTE,
     ADMIN_FORM_ROUTE,
     ADMIN_LIST_ROUTE,
     ROLE_FORM_ROUTE,

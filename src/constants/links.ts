@@ -3,7 +3,7 @@ import { LinkType } from '@tager/admin-ui';
 import { getPageListUrl } from '@tager/admin-pages';
 import { getEmailLogListUrl, getEmailTemplateListUrl } from '@tager/admin-mail';
 import { getSettingItemListUrl } from '@tager/admin-settings';
-import { getSeoSettingsUrl } from '@tager/admin-seo';
+import { getSeoSettingsUrl, getSeoTemplatesUrl } from '@tager/admin-seo';
 import { getAdminListUrl, getRoleListUrl } from '@tager/admin-administrators';
 
 type LinkKey =
@@ -14,7 +14,8 @@ type LinkKey =
   | 'SETTINGS_COMMON'
   | 'SEO_SETTINGS'
   | 'ADMIN_ROLES'
-  | 'ADMIN_ADMINS';
+  | 'ADMIN_ADMINS'
+  | 'SEO_TEMPLATES';
 
 export const getLinks = (
   t: TFunction
@@ -23,7 +24,6 @@ export const getLinks = (
     url: '/',
     text: t('admin:home'),
   },
-
   PAGE_LIST: {
     url: getPageListUrl(),
     text: t('admin:pages'),
@@ -42,7 +42,11 @@ export const getLinks = (
   },
   SEO_SETTINGS: {
     url: getSeoSettingsUrl(),
-    text: t('admin:seoSettings'),
+    text: t('admin:seoServices'),
+  },
+  SEO_TEMPLATES: {
+    url: getSeoTemplatesUrl(),
+    text: t('admin:seoTemplates'),
   },
   ADMIN_ROLES: {
     url: getRoleListUrl(),

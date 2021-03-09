@@ -47,7 +47,11 @@ export default defineComponent({
       },
       {
         name: t('admin:settings'),
-        linkList: [links.value.SETTINGS_COMMON, links.value.SEO_SETTINGS],
+        linkList: [
+          links.value.SETTINGS_COMMON,
+          links.value.SEO_TEMPLATES,
+          links.value.SEO_SETTINGS,
+        ],
       },
       {
         name: t('admin:eMail'),

@@ -5,6 +5,8 @@ const RU: typeof EN = {
   settings: 'Настройки',
   common: 'Общие',
   seoSettings: 'SEO Настройки',
+  seoTemplates: 'SEO Шаблоны',
+  seoServices: 'SEO Сервисы',
   templates: 'Шаблоны',
   logs: 'Логи',
   administrators: 'Администраторы',

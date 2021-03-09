@@ -24,7 +24,11 @@ export default defineComponent({
         id: 'settings',
         icon: 'settings',
         text: t('admin:settings'),
-        children: [links.value.SETTINGS_COMMON, links.value.SEO_SETTINGS],
+        children: [
+          links.value.SETTINGS_COMMON,
+          links.value.SEO_TEMPLATES,
+          links.value.SEO_SETTINGS,
+        ],
       },
       {
         id: 'email',

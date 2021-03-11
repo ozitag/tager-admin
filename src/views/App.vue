@@ -20,6 +20,7 @@ export default defineComponent({
 
     const sidebarMenuList: Array<MenuItemType> = [
       { id: 'home', icon: 'home', ...links.value.HOME },
+      { id: 'pages', icon: 'viewList', ...links.value.PAGE_LIST },
       {
         id: 'settings',
         icon: 'settings',

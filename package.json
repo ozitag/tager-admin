@@ -1,6 +1,6 @@
 {
   "name": "frontend-new",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve --mode local",
@@ -22,7 +22,7 @@
     "@tager/admin-seo": "^0.4.1",
     "@tager/admin-services": "^0.2.22",
     "@tager/admin-settings": "^0.3.12",
-    "@tager/admin-ui": "^0.8.50",
+    "@tager/admin-ui": "^0.8.53",
     "@vue/composition-api": "^1.0.0-beta.13",
     "core-js": "^3.6.4",
     "date-fns": "^2.16.1",

@@ -1380,10 +1380,10 @@
     lodash.kebabcase "^4.1.1"
     path-to-regexp "^6.1.0"
 
-"@tager/admin-ui@^0.8.50":
-  version "0.8.50"
-  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.8.50.tgz#83323c147086534a4efa45152ea0f18294e06c59"
-  integrity sha512-CWCoNktyDkB434YO9+yvhfBhHmzEUrRESVKv6cWcLDXlFWltapU7WCKo2MOzJ8NscXb0WX5YHLNLRxzBKA7WOQ==
+"@tager/admin-ui@^0.8.53":
+  version "0.8.53"
+  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.8.53.tgz#db67f524c650b45ca8209c3cd58a59b808ccb472"
+  integrity sha512-S0sg34X87+XlFwaynDUsuE008IFMhfhqR4K+C329hRm1GS+wEmj23XjChYLoyvjgqxPuJlo0NOvVYI1i8/ON+w==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@ckeditor/ckeditor5-vue" "^1.0.2"

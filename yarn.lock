@@ -1333,10 +1333,10 @@
     "@babel/runtime" "^7.11.2"
     lodash.kebabcase "^4.1.1"
 
-"@tager/admin-layout@^0.4.13":
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.4.13.tgz#7659d76f83a475dc5423aaf96d646318f1a7bb46"
-  integrity sha512-uURPhsU4RmeMNJQopEnVzH4iSKMKi4CpKiwrF17pztBPcRZ4t95sfSov1ZZ9qQdQBo5SP3/j4IrfC33Wh/JAKA==
+"@tager/admin-layout@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-0.5.1.tgz#a4ca222936279a09cdee5cb7a03635803146dc4a"
+  integrity sha512-RxoZ/bjG88wZHI628HX3a/Ou5kDQ1LfQD1nkBPgVkdsjtTy7BcGs02Xct/+Vm0SPwc+O7xUPg1NsFLqOxYg6ew==
   dependencies:
     "@babel/runtime" "^7.10.4"
 
@@ -1347,26 +1347,26 @@
   dependencies:
     path-to-regexp "^6.1.0"
 
-"@tager/admin-pages@^0.3.13":
-  version "0.3.13"
-  resolved "https://registry.yarnpkg.com/@tager/admin-pages/-/admin-pages-0.3.13.tgz#cf10cf32516d96aaa5fa95ec4b6b343dc147d1fe"
-  integrity sha512-qXKt+dJSNL0Zph791dzNxJ+9FRUWvkVOKKDp+cu25SphSBcgYWmzF3UxSOgc7KHfu3WkS08IuJ5Jq2NuA4t5eQ==
+"@tager/admin-pages@^0.3.15":
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/@tager/admin-pages/-/admin-pages-0.3.15.tgz#6360660519da43152af672ba62f71749e6025e69"
+  integrity sha512-63LZCnbrepywDFnUuxUWdSRqKtGMTjK2/noJDizrMxYfqCAHr6QQZ1yna+UmDAULKyZMTu/g0rFmd5lvH3BhSw==
   dependencies:
     lodash.kebabcase "^4.1.1"
     path-to-regexp "^6.1.0"
 
-"@tager/admin-seo@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@tager/admin-seo/-/admin-seo-0.4.1.tgz#1c8fae1ed7224d6bcf1cac63aafa915679467394"
-  integrity sha512-8LGrejW9S5CEMKHeBwVTnxEJeQhAN1WLyLDTI9DZmNcObE0PuzLmw+5339Gx4pQW1RLkLox+CtY/YOMKqCJxvQ==
+"@tager/admin-seo@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@tager/admin-seo/-/admin-seo-0.4.3.tgz#cf28cfa2e33e5dc27fc98127d0f645c168b43621"
+  integrity sha512-G9hc0bguuBoh2MklaEKLkhzBk7W6gN/iTBduHeBf9kzeTZnkn+5D4LhLRIwRyLGUBsLHG3DWD9Ny5KM2Y6Hy4Q==
   dependencies:
     lodash.kebabcase "^4.1.1"
     path-to-regexp "^6.1.0"
 
-"@tager/admin-services@^0.2.22":
-  version "0.2.22"
-  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.2.22.tgz#4a286fd2befa0a0503055ea4da3eb36ecb77a70b"
-  integrity sha512-cOS5Kz7yajN54e/g7OWqcxk4BYlBxXzjq6rTkO9JtuPXllQxiHUOaifM4ExlhV1tqhmPGzz7bpxpjGswTbCtPQ==
+"@tager/admin-services@^0.2.23":
+  version "0.2.23"
+  resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-0.2.23.tgz#86f10c8a865f975bf2c5bb939a706750ec47d3f2"
+  integrity sha512-9fIWMi5b6wyA/MPDUSag95km5I4Bx6bBmO7lizM56U2ZmCKoPM7zvauDOc2kAH/aT4HikkvZCIxH+rzuli633g==
   dependencies:
     i18next "^19.7.0"
     nanoid "^3.1.12"
@@ -1380,15 +1380,15 @@
     lodash.kebabcase "^4.1.1"
     path-to-regexp "^6.1.0"
 
-"@tager/admin-ui@^0.8.53":
-  version "0.8.53"
-  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.8.53.tgz#db67f524c650b45ca8209c3cd58a59b808ccb472"
-  integrity sha512-S0sg34X87+XlFwaynDUsuE008IFMhfhqR4K+C329hRm1GS+wEmj23XjChYLoyvjgqxPuJlo0NOvVYI1i8/ON+w==
+"@tager/admin-ui@^0.8.61":
+  version "0.8.61"
+  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-0.8.61.tgz#0081d90e7d72e6cdc1826f95952be79ee1d1e795"
+  integrity sha512-nhQFpRZhv+BUC8c73OBLwNoHHoNUaxj1QSQ2A5mn3ed+cvbGwzC82L6q4FQ8dTLVChs5lq53RcoRi3DuDvULUQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@ckeditor/ckeditor5-vue" "^1.0.2"
     "@popperjs/core" "^2.6.0"
-    "@tager/admin-wysiwyg" "^0.1.0"
+    "@tager/admin-wysiwyg" "^0.1.2"
     autosize "^4.0.2"
     leaflet "^1.7.1"
     lodash.debounce "^4.0.8"
@@ -1401,10 +1401,10 @@
     vue-color "^2.7.1"
     vuedraggable "^2.24.3"
 
-"@tager/admin-wysiwyg@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@tager/admin-wysiwyg/-/admin-wysiwyg-0.1.0.tgz#eb37a8aae1459b2eee8f00720b833b76b65727c0"
-  integrity sha512-9+95nymxi1BNXPAlOXS4wE2tLVnVrrDjWjRk3Uo6TRtqweFlIoLCnwRhLsKlxWC53C8A+hFs0LkGa0aHHrw2mQ==
+"@tager/admin-wysiwyg@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@tager/admin-wysiwyg/-/admin-wysiwyg-0.1.2.tgz#5355d3b9c0aa140696743e2e68e58904a67af7db"
+  integrity sha512-w+Ker+vXQ9JHi7Z+jLqSsD7vWfyyccqSfSDMjgGrSGm80FP3LT1vRkWajqyasxKiw2P6P9woqqqDi/+MEjaY/w==
 
 "@types/anymatch@*":
   version "1.3.1"

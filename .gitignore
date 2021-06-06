@@ -7,6 +7,7 @@ src/config/app.json
 # local env files
 .env.local
 .env.*.local
+!env/.env.local
 
 # Log files
 npm-debug.log*

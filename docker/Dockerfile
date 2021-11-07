@@ -6,7 +6,7 @@ FROM node:12-alpine as build-stage
 # --no-cache: download package index on-the-fly, no need to cleanup afterwards
 # --virtual: bundle packages, remove whole bundle at once, when done
 # Reference: https://habr.com/ru/company/ruvds/blog/491710/
-RUN apk --no-cache add --virtual builds-deps build-base python
+RUN apk --no-cache add --virtual builds-deps build-base py-pip
 
 WORKDIR /var/www/app
 

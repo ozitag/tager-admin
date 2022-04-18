@@ -1,4 +1,5 @@
 const util = require('util');
+const { defineConfig } = require("@vue/cli-service");
 const SentryCliPlugin = require('@sentry/webpack-plugin');
 
 const appConfig = require('./src/config/config.json');
@@ -13,6 +14,7 @@ function colorLog(message) {
 
 function setAppVersion() {
   try {
+    /** `app.json` probably can be added in docker */
     const app = require('./src/config/app.json');
     process.env.VUE_APP_VERSION = app.version;
   } catch (error) {
@@ -38,7 +40,8 @@ colorLog(`Sentry CLI Plugin enabled: ${isSentryEnabled}`);
 
 setAppVersion();
 
-module.exports = {
+module.exports = defineConfig({
+  transpileDependencies: true,
   pages: {
     index: {
       entry: 'src/main.ts',
@@ -47,18 +50,6 @@ module.exports = {
   },
   publicPath: process.env.VUE_APP_PUBLIC_PATH || '/',
   chainWebpack: (config) => {
-    const svgRule = config.module.rule('svg');
-
-    svgRule.uses.clear();
-
-    svgRule
-      .use('babel-loader')
-      .loader('babel-loader')
-      .end()
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
-      .options({ svgo: { plugins: [{ removeViewBox: false }] } });
-
     if (isSentryEnabled) {
       config.plugin('sentry').use(SentryCliPlugin, [
         {
@@ -68,4 +59,5 @@ module.exports = {
       ]);
     }
   },
-};
+
+  });

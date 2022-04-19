@@ -1317,16 +1317,6 @@
     "@sentry/utils" "6.19.6"
     tslib "^1.9.3"
 
-"@sentry/integrations@6.19.6":
-  version "6.19.6"
-  resolved "https://registry.yarnpkg.com/@sentry/integrations/-/integrations-6.19.6.tgz#157152f16a8ad8df8a97d08bfe740909446b075a"
-  integrity sha512-K2xuA/ByhTh3qfIe0/XIsQSNf1HrRuIgtkC4TbU7T0QosybtXDsh6t/EWK+qzs2RjVE+Iaqldihstpoyew1JgA==
-  dependencies:
-    "@sentry/types" "6.19.6"
-    "@sentry/utils" "6.19.6"
-    localforage "^1.8.1"
-    tslib "^1.9.3"
-
 "@sentry/minimal@6.19.6":
   version "6.19.6"
   resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-6.19.6.tgz#b6cced3708e25d322039e68ebdf8fadfa445bf7d"
@@ -1405,6 +1395,13 @@
   resolved "https://registry.yarnpkg.com/@sphinxxxx/color-conversion/-/color-conversion-2.2.2.tgz#03ecc29279e3c0c832f6185a5bfa3497858ac8ca"
   integrity sha512-XExJS3cLqgrmNBIP3bBw6+1oQ1ksGjFh0+oClDKFYpCCqx/hlqwWO5KO/S63fzUo67SxI9dMrF0y5T/Ey7h8Zw==
 
+"@tager/admin-dynamic-field@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@tager/admin-dynamic-field/-/admin-dynamic-field-1.0.0-rc.1.tgz#ce5ac6e0f2829608e535625bb4324441fd099952"
+  integrity sha512-oLX4YsDA/fgnkfP7oq1XJrYWUs8tJVAuvyE/eJgeEYRZ38bGbRPoaSvkFOcoWw3EognePS8S0jVYS2Q7GbNAeg==
+  dependencies:
+    lodash.kebabcase "^4.1.1"
+
 "@tager/admin-layout@^1.0.0-rc.4":
   version "1.0.0-rc.4"
   resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-1.0.0-rc.4.tgz#a0403304b2e750083898efe00254b8418664a3f6"
@@ -1419,10 +1416,10 @@
     nanoid "^3.3.2"
     zod "^3.14.4"
 
-"@tager/admin-ui@^1.0.0-rc.11":
-  version "1.0.0-rc.11"
-  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-1.0.0-rc.11.tgz#02a3b6971e32332b1e6c09ec854e911ef33fbd85"
-  integrity sha512-GsBRzq6T2Pm9FMqG5KtSX4tH+E7CTQfFcGqhW3WZPzF4NY0P3b2EJ5HTTEfzFbfazP/7ryA4wh436tFsNTd6xA==
+"@tager/admin-ui@^1.0.0-rc.13":
+  version "1.0.0-rc.13"
+  resolved "https://registry.yarnpkg.com/@tager/admin-ui/-/admin-ui-1.0.0-rc.13.tgz#b3e15249c35f14cb56824136c8baafd9db842771"
+  integrity sha512-rktEWTtSH/Uk1UMW9Mdb8+XgtEF9767TnkgkbeTfo9JHa2ycOHn8PVOk3EbpTaewzPXgWhNMSrPPSK5F4VUBGQ==
   dependencies:
     "@ckeditor/ckeditor5-vue" "^3.0.0"
     "@floating-ui/dom" "^0.4.4"
@@ -4567,11 +4564,6 @@ ignore@^5.1.8, ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-immediate@~3.0.5:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
-  integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
-
 immutable@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0.tgz#b86f78de6adef3608395efb269a91462797e2c23"
@@ -5006,13 +4998,6 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lie@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/lie/-/lie-3.1.1.tgz#9a436b2cc7746ca59de7a41fa469b3efb76bd87e"
-  integrity sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=
-  dependencies:
-    immediate "~3.0.5"
-
 lilconfig@2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.4.tgz#f4507d043d7058b380b6a8f5cb7bcd4b34cee082"
@@ -5084,13 +5069,6 @@ loader-utils@^2.0.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^2.1.2"
-
-localforage@^1.8.1:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.9.0.tgz#f3e4d32a8300b362b4634cc4e066d9d00d2f09d1"
-  integrity sha512-rR1oyNrKulpe+VM9cYmcFn6tsHuokyVHFaCM3+osEmxaHTbEk8oQu6eGDfS6DQLWi/N67XRmB8ECG37OES368g==
-  dependencies:
-    lie "3.1.1"
 
 locate-path@^2.0.0:
   version "2.0.0"

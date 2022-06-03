@@ -25,7 +25,7 @@ export default defineComponent({
       fetchPageCount,
       { data: pageCountData, status: pageCountDataStatus },
     ] = useResource({
-      fetchResource: getPageCount,
+      fetchResource: () => getPageCount(),
       initialValue: null,
       resourceName: 'Page count',
       context,

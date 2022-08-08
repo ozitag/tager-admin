@@ -1,7 +1,7 @@
 # Reference: https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html
 
 # build stage
-FROM node:12-alpine as build-stage
+FROM node:16-alpine as build-stage
 
 # --no-cache: download package index on-the-fly, no need to cleanup afterwards
 # --virtual: bundle packages, remove whole bundle at once, when done

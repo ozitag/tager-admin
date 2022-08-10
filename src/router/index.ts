@@ -31,6 +31,7 @@ export const HOME_ROUTE: RouteRecordRaw = {
 };
 
 export const router = createRouter({
+  history: createWebHistory(process.env.VUE_APP_PUBLIC_PATH || "/"),
   routes: [
     HOME_ROUTE,
     // PAGE_FORM_ROUTE,

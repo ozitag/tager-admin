@@ -1,4 +1,4 @@
-import { type RouteRecordRaw } from "vue-router";
+import {createWebHistory, type RouteRecordRaw} from "vue-router";
 
 import { createRouter } from "@tager/admin-layout";
 // import { PAGE_FORM_ROUTE, PAGE_LIST_ROUTE } from '@tager/admin-pages';

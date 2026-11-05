@@ -722,19 +722,19 @@
   resolved "https://registry.yarnpkg.com/@sphinxxxx/color-conversion/-/color-conversion-2.2.2.tgz#03ecc29279e3c0c832f6185a5bfa3497858ac8ca"
   integrity sha512-XExJS3cLqgrmNBIP3bBw6+1oQ1ksGjFh0+oClDKFYpCCqx/hlqwWO5KO/S63fzUo67SxI9dMrF0y5T/Ey7h8Zw==
 
-"@tager/admin-dynamic-field@^1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@tager/admin-dynamic-field/-/admin-dynamic-field-1.1.6.tgz#7a642fcb423f2a8faf7ef038c0280399ec4a6924"
-  integrity sha512-PvNxIb+5aS3IPu0vOcYI13TOLo51LI0UJXvrFXJpyVcMxeIfKeZ2x7Y3OAXeF2GpvkoLS+5CwPDC9UP8eN0HKg==
+"@tager/admin-dynamic-field@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@tager/admin-dynamic-field/-/admin-dynamic-field-1.1.7.tgz#c788939d25af8cf7626f66db5032cf941b3c5a06"
+  integrity sha512-ilS03YtFfUs1dAWsI31fQ+5ASlXgZGMNZQrxNkNJdjAjseHNE4hEPQAtM44YFDBbk//nUK8HoEbrr3AqR+fhjg==
   dependencies:
     lodash.kebabcase "^4.1.1"
 
-"@tager/admin-layout@^1.0.31":
-  version "1.0.31"
-  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-1.0.31.tgz#3835a491ef42b91f19a821d45c93dc2c76a696b6"
-  integrity sha512-gKZ3oaCWswJR33Lboa1RwzvqPcG6AoE7MgUf8/hu/grqLAI4heGFwnV9KWV9rH9A7yikUIbCCXY75O9hyc+Wpw==
+"@tager/admin-layout@^1.0.32":
+  version "1.0.32"
+  resolved "https://registry.yarnpkg.com/@tager/admin-layout/-/admin-layout-1.0.32.tgz#75cc052ed4ea219b39a5a66a685800f52b234cbd"
+  integrity sha512-jD+XJbraY8jY8EYpFFpMYvqC6paVCrVcFA36DFXes/Tc9kR8M2eHu/A/xRXs06EE08SJRDk57KNwuCb4QTBgLA==
 
-"@tager/admin-services@1.1.19", "@tager/admin-services@^1.1.19", "@tager/admin-services@workspace:*":
+"@tager/admin-services@1.1.19", "@tager/admin-services@^1.1.19":
   version "1.1.19"
   resolved "https://registry.yarnpkg.com/@tager/admin-services/-/admin-services-1.1.19.tgz#41f353e082c1183c4feb93789070108bb60f20b0"
   integrity sha512-7UiRqoAIm6bhqGJ/on/PoZq5KqjUwbGf0JjlOvg8Nm6FMTDdKcxLdBhsiux3GG7Pxl7RKgFGMhFzcOY+6T/g/w==

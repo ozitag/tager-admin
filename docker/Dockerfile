@@ -1,7 +1,7 @@
 # Reference: https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html
 
 # build stage
-FROM node:16-alpine as build-stage
+FROM node:20-alpine as build-stage
 WORKDIR /var/www/app
 
 # --no-cache: download package index on-the-fly, no need to cleanup afterwards

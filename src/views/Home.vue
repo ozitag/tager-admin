@@ -3,7 +3,11 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, SetupContext } from "vue";
+/* eslint-disable @typescript-eslint/no-unused-vars --
+   pageCountData, pageCountDataStatus и links используются
+   закомментированными примерами навигации ниже: это boilerplate,
+   новый проект раскомментирует нужные блоки. */
+import { computed, defineComponent, onMounted } from "vue";
 
 import { NavigationGrid, type NavigationGridItem } from "@tager/admin-ui";
 import { ResponseBody, useI18n, useResource } from "@tager/admin-services";
@@ -14,7 +18,7 @@ import { getLinks } from "@/constants/links";
 export default defineComponent({
   name: "PageHome",
   components: { NavigationGrid },
-  setup(props, context: SetupContext) {
+  setup() {
     const i18n = useI18n();
 
     const [

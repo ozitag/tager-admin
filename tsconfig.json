@@ -11,9 +11,11 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "sourceMap": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "vite/client",
+      "node"
     ],
     "paths": {
       "@/*": [

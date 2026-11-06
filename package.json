@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@sentry/vue": "^11.11.0",
-    "@tager/admin-dynamic-field": "^1.1.7",
-    "@tager/admin-layout": "^1.0.32",
-    "@tager/admin-services": "^1.1.19",
-    "@tager/admin-ui": "^1.0.158",
+    "@tager/admin-dynamic-field": "^2.0.0",
+    "@tager/admin-layout": "^2.0.0",
+    "@tager/admin-services": "^2.0.1",
+    "@tager/admin-ui": "^2.0.4",
     "core-js": "^3.45.1",
     "date-fns": "^4.4.0",
     "lodash": "^4.17.21",
@@ -45,9 +45,5 @@
     "vite": "^7.3.7",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.14"
-  },
-  "resolutions": {
-    "@tager/admin-ui/@tager/admin-services": "1.1.19",
-    "vue3-json-viewer": "2.3.0"
   }
 }
